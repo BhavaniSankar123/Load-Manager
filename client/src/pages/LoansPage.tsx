@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import LoansTable from '../components/LoansDashboard/LoansTable';
-import { api } from '../services/api';
 import ".././index.css"
 
 const LoansPage: React.FC = () => {
-  const [loans, setLoans] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    const fetchLoans = async () => {
-      try {
-        const response = await api.getApplications();
-        setLoans(response.data);
-      } catch (error) {
-        console.error('Error fetching loans:', error);
-      }
-    };
-    fetchLoans();
-  }, []);
 
   return (
     <div className="loans-page">
