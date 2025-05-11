@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { api } from '../services/api';
 import LoansTable from '../components/LoansDashboard/LoansTable';
+import { api } from '../services/api';
 import ".././index.css"
 
 const LoansPage: React.FC = () => {
